@@ -25,12 +25,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/{age}")
+    @GetMapping("/age/{age}")
     public User getUserByAge(@PathVariable int age){
         return userService.getUser(age);
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/name/{name}")
     public User getUserByAge(@PathVariable String name){
         return userService.getUserByName(name);
     }
