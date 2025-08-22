@@ -30,8 +30,24 @@ public class ProductController {
         return productService.productInfo(id);
     }
 
+    /**
+     * Handles HTTP POST requests to add a new product.
+     * 
+     * @param prod the Product object received in the request body to be added
+     */
     @PostMapping("/addProduct")
     public void pushProduct(@RequestBody Product prod){
         productService.AddProduct(prod);
     }
+
+    /**
+     * Handles HTTP POST requests to update an existing product.
+     * 
+     * @param prod the Product object received in the request body to be updated
+     */
+
+    // @PostMapping("/updateProduct")
+    // public void updateProduct(@RequestBody Product prod){
+    //     productService.UpdateProduct(prod);
+    // }
 }

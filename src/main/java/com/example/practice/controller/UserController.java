@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.practice.CustomAnnotation.annotation1;
 import com.example.practice.model.User;
 import com.example.practice.service.UserService;
 
@@ -21,7 +22,9 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/")
+    @annotation1
     public List<User> getAllUser(){
+        System.out.println("Fetching all users");
         return userService.getAllUsers();
     }
 
